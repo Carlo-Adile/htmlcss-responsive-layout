@@ -15,12 +15,27 @@ ul{
     list-style: none;
 }
 
-/* li{
-    display: inline;
-} */
+img{
+    display: block;
+    max-width: 100%;
+}
 
 .debug{
     border:1px solid black;
+}
+
+/* text utilities */
+h1{
+    color:white;
+    font-family: sans-serif;
+    font-size: 3rem;
+}
+
+p{
+    color: white;
+    font-family: sans-serif;
+    font-size:1.2rem;
+    line-height: 2rem;
 }
 
 /* header */
@@ -61,7 +76,7 @@ section:nth-child(even){
 }
 
 .container{
-    width:90%;
+    width:80%;
     margin:auto;
 }
 
@@ -69,13 +84,23 @@ section:nth-child(even){
     display: flex;
     flex-wrap: wrap;
     margin:0;
-    /* gap:1rem; */
+    padding:4rem 0 4rem 0;
 }
 
 .card{
     background-color: var(--cards);
-    min-height:400px;
+    min-height:700px;
     border-radius:1rem;
+}
+
+.white{
+    background-color: white;
+}
+
+.no_card_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap:4rem;
 }
 
 [class^="col"]{
@@ -86,15 +111,19 @@ section:nth-child(even){
     width:100%;
 }
 
-/*
+/*********************************************
+
 rule used is mobile first (max-width 768px)
 media rules are used for:
 - medium: tablet resolution (769px-992px);
 - large: desktop resolution (min-width 993px);
 
-*/
+**********************************************/
 
 @media screen and (min-width:769px){
+    .col-md-12{
+        width:100%;
+    }
     .col-md-8{
         width: calc((100%/12)*8);
     }
@@ -117,6 +146,9 @@ media rules are used for:
         max-width: 1200px;
     }
 
+    .col-lg-12{
+        width:100%;
+    }
     .col-lg-8{
         width: calc((100%/12)*8);
     }
