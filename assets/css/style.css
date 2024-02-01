@@ -10,3 +10,41 @@
     --cards:#b5ddff;
     --footer:#333333;
 }
+
+ul{
+    list-style: none;
+}
+
+/* li{
+    display: inline;
+} */
+
+.debug{
+    border:1px solid black;
+}
+
+#site_header{
+    width:100%;
+    background-color: var(--header);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#navigate{
+    width:60%;
+    padding:0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_links{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        display: inline;
+    };
+}
