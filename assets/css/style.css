@@ -62,7 +62,6 @@ section:nth-child(even){
 
 .container{
     width:90%;
-    /* max-width:372px; */
     margin:auto;
 }
 
@@ -88,14 +87,14 @@ section:nth-child(even){
 }
 
 /*
-rule used is mobile first width 372px;
+rule used is mobile first (max-width 768px)
 media rules are used for:
-- medium: tablet resolution (min-width 373px);
-- large: desktop resolution (min-width 769px);
+- medium: tablet resolution (769px-992px);
+- large: desktop resolution (min-width 993px);
 
 */
 
-@media screen and (min-width:373px){
+@media screen and (min-width:769px){
     .col-md-8{
         width: calc((100%/12)*8);
     }
@@ -110,12 +109,12 @@ media rules are used for:
     }
 }
 
-@media screen and (min-width:769px){
+@media screen and (min-width:993px){
     #navigate{
-        max-width: 1152px;
+        max-width: 1200px;
     }
     .container{
-        max-width: 1152px;
+        max-width: 1200px;
     }
 
     .col-lg-8{
