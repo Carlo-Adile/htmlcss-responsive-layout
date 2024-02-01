@@ -6,9 +6,9 @@
 }
 
 :root{
-    --header: #0084fd;
-    --main:#9792e4;
-    --cards:#b5ddff;
+    --primary: #0084fd;
+    --secondary:#9792e4;
+    --card:#b5ddff;
     --footer:#333333;
 }
 
@@ -34,6 +34,7 @@ h1{
 }
 
 h2{
+    color:var(--primary);
     font-size:2rem;
 }
 
@@ -46,14 +47,15 @@ p{
     width:50%;
     color:white;
     padding:0.75rem;
-    background-color: var(--header);
+    background-color: var(--primary);
     border-radius:2rem;
-    text-decoration: none ;
+    text-decoration: none;
 }
 
 /* h4 is used only for icons  */
 h4{
     font-size:5rem;
+    color:var(--primary);
 }
 
 /*************************
@@ -74,16 +76,17 @@ main, grid and cards
 
 .card{
     width:100%;
-    background-color: var(--cards);
+    background-color: var(--card);
     min-height:250px;
     border-radius:1rem;
     padding:2rem;
+    text-align: center;
     
     div{
         display: flex;
         flex-flow: column wrap;
-        /* align-items: center;
-        justify-content: center; */
+        align-items: center;
+        justify-content: center;
         gap:2rem;
     }
 }
@@ -113,7 +116,7 @@ header
 
 #site_header{
     width:100%;
-    background-color: var(--header);
+    background-color: var(--primary);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -146,15 +149,18 @@ main{
 }
 
 section:nth-child(even){
-    background-color: var(--main);
+    background-color: var(--secondary);
 }
 
 /* section demo */
 
-#demo :nth-child(n+2):nth-child(-n+5){
+#demo{
     text-align: center;
 }
-
+/* #demo :nth-child(n+2):nth-child(-n+5){
+    text-align: center;
+}
+ */
 #phone{
     height:350px;
     width:350px;
