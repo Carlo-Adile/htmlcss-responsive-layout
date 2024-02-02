@@ -299,12 +299,21 @@ footer
 #site_footer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     background-color: var(--footer);
     width:100%;
-    min-height:200px;
-    color:white;
+}
+
+.footer_content{
+    height:350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    color: white;
+
+    a{
+        color:var(--secondary)
+    }
 }
 
 /*********************************************
