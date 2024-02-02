@@ -129,14 +129,15 @@ structure: container, column-12 grid and cards
 }
 
 .no_bg{
-    color:black;
+    
     background-color: transparent;
     h1{color:var(--primary);}
+    p{color:white}
 }
 
 .white_bg{
     background-color: white;
-    
+
     h1{color:var(--primary);}
     h2{color:--primary;}
     p{color:black;}
@@ -211,6 +212,13 @@ section:nth-child(even){
     }
 }
 
+/* section free  */
+
+#free_text{
+    font-size:6rem;
+    color:yellowgreen;
+
+}
 /*************************
 footer
 **************************/
