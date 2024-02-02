@@ -136,9 +136,10 @@ structure: container, column-12 grid and cards
 
 .white_bg{
     background-color: white;
-    color:black;
+    
     h1{color:var(--primary);}
-    h2{color:black;}
+    h2{color:--primary;}
+    p{color:black;}
 }
 
 .secondary_bg{
@@ -219,11 +220,6 @@ footer
     width:100%;
     min-height:200px;
 }
-
-/*************************
-various id 
-**************************/
-
 
 /*********************************************
 rule used is mobile first (max-width 768px)
