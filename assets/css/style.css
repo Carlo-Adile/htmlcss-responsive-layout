@@ -34,7 +34,7 @@ h1{
 }
 
 h2{
-    color:var(--primary);
+    /* color:var(--primary); */
     font-size:2rem;
 }
 
@@ -63,7 +63,6 @@ button-appearance utilities
     justify-content: center;
     gap:1rem;
     text-decoration: none;
-    background-color: var(--primary);
 }
 
 .btn{
@@ -71,6 +70,7 @@ button-appearance utilities
     color:white;
     padding:0.75rem;
     border-radius:2rem;
+    background-color: var(--primary);
 }
 
 .btn_circle{
@@ -78,6 +78,7 @@ button-appearance utilities
     height:50px;
     width:50px;
     border-radius:50%;
+    background-color: var(--secondary);
 }
 
 /*************************
@@ -131,22 +132,46 @@ structure: container, column-12 grid and cards
 .no_bg{
     
     background-color: transparent;
-    h1{color:var(--primary);}
-    p{color:white}
+    /* h1{color:var(--primary);} */
+    
 }
 
 .white_bg{
     background-color: white;
-
-    h1{color:var(--primary);}
+    /* h1{color:var(--primary);}
     h2{color:--primary;}
-    p{color:black;}
+    p{color:black;} */
 }
 
 .secondary_bg{
     background-color: var(--secondary);
-    color:white;
+    /* color:white; */
 }
+
+/* card color style */
+
+.style0{
+    h2{color:var(--primary)}
+}
+
+.style1{
+    color:white;
+    a{color:var(--secondary);
+        background-color: white;}
+}
+
+.style2{
+    color:black;
+}
+
+.style3{
+    h1{color:var(--secondary);}
+    h2{color:var(--secondary);}
+    a{color:white;
+    background-color: var(--secondary);}
+}
+
+
 
 /*************************
 header
@@ -188,14 +213,14 @@ main{
 
 section:nth-child(even){
     background-color: var(--secondary);
-    color:white;
+    /* color:white; */
 }
 
 /* section demo */
 #phone{
     height:350px;
     width:350px;
-    margin-bottom:-2rem;
+    margin-bottom:-1rem;
 }
 
 /* section testimonial */
@@ -224,19 +249,24 @@ footer
 **************************/
 
 #site_footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background-color: var(--footer);
     width:100%;
     min-height:200px;
+    color:white;
 }
 
 /*********************************************
-rule used is mobile first (max-width 768px)
+rule used is mobile first (max-width 767px)
 media rules are used for:
-- medium: tablet resolution (769px-992px);
-- large: desktop resolution (min-width 993px);
+- medium: tablet resolution (768px-991px);
+- large: desktop resolution (min-width 992px);
 **********************************************/
 
-@media screen and (min-width:769px){
+@media screen and (min-width:768px){
     .no_wrap{
         flex-wrap: nowrap;
     }
@@ -257,7 +287,7 @@ media rules are used for:
     }
 }
 
-@media screen and (min-width:993px){
+@media screen and (min-width:992px){
     #navigate{
         max-width: 1200px;
     }
