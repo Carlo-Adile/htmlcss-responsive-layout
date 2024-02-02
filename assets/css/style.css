@@ -146,10 +146,6 @@ structure: container, column-12 grid and cards
     color:white;
 }
 
-.no_wrap{
-    flex-wrap: nowrap;
-}
-
 /*************************
 header
 **************************/
@@ -237,6 +233,9 @@ media rules are used for:
 **********************************************/
 
 @media screen and (min-width:769px){
+    .no_wrap{
+        flex-wrap: nowrap;
+    }
     .col-md-12{
         width:100%;
     }
@@ -255,6 +254,9 @@ media rules are used for:
 }
 
 @media screen and (min-width:993px){
+    .no_wrap{
+        flex-wrap: nowrap;
+    }
     #navigate{
         max-width: 1200px;
     }
