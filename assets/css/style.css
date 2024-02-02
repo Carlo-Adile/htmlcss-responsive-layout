@@ -26,7 +26,7 @@ img{
 }
 
 /*************************
-text and "button-appearance" utilities 
+text utilities 
 **************************/
 
 h1{
@@ -38,18 +38,8 @@ h2{
     font-size:2rem;
 }
 
-p{
+h3{
     font-size:1.2rem;
-    line-height: 2rem;
-}
-
-.btn{
-    width:50%;
-    color:white;
-    padding:0.75rem;
-    background-color: var(--primary);
-    border-radius:2rem;
-    text-decoration: none;
 }
 
 /* h4 is used only for icons  */
@@ -58,10 +48,43 @@ h4{
     color:var(--primary);
 }
 
+p{
+    font-size:1.2rem;
+    line-height: 2rem;
+}
+
 /*************************
-main, grid and cards
+button-appearance utilities 
 **************************/
 
+[class^="btn"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    text-decoration: none;
+    background-color: var(--primary);
+}
+
+.btn{
+    width:50%;
+    color:white;
+    padding:0.75rem;
+    border-radius:2rem;
+}
+
+.btn_circle{
+    font-size:1.5rem;
+    height:50px;
+    width:50px;
+    border-radius:50%;
+}
+
+/*************************
+structure: container, column-12 grid and cards
+**************************/
+
+/* container, row */
 .container{
     width:80%;
     margin:auto;
@@ -74,14 +97,28 @@ main, grid and cards
     padding:4rem 0 4rem 0;
 }
 
+/* column */
+[class^="col"]{
+    padding:0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12{
+    width:100%;
+}
+
+/* card */
 .card{
+    display: flex;
+    flex-wrap: wrap;
     width:100%;
     background-color: var(--card);
     min-height:250px;
     border-radius:1rem;
-    padding:2rem;
-    text-align: center;
-    
+    padding:1rem;
+    gap:1rem;
+
     div{
         display: flex;
         flex-flow: column wrap;
@@ -91,23 +128,26 @@ main, grid and cards
     }
 }
 
-.white{
+.no_bg{
+    color:black;
+    background-color: transparent;
+    h1{color:var(--primary);}
+}
+
+.white_bg{
     background-color: white;
+    color:black;
+    h1{color:var(--primary);}
+    h2{color:black;}
 }
 
-.no_card_content{
-    display: flex;
-    flex-wrap: wrap;
+.secondary_bg{
+    background-color: var(--secondary);
+    color:white;
 }
 
-[class^="col"]{
-    padding:0.5rem;
-}
-
-.col-12{
-    display: flex;
-    flex-wrap: wrap;
-    width:100%;
+.no_wrap{
+    flex-wrap: nowrap;
 }
 
 /*************************
@@ -150,21 +190,28 @@ main{
 
 section:nth-child(even){
     background-color: var(--secondary);
+    color:white;
 }
 
 /* section demo */
-
-#demo{
-    text-align: center;
-}
-/* #demo :nth-child(n+2):nth-child(-n+5){
-    text-align: center;
-}
- */
 #phone{
     height:350px;
     width:350px;
     margin-bottom:-2rem;
+}
+
+/* section testimonial */
+.testimonial_img{
+    width:200px;
+    height:200px;
+
+    img{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        object-fit: cover;
+        
+    }
 }
 
 /*************************
